@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Badanie form spędzania czasu wolnego" />
+    <meta name="author" content="Ankiety XYZ sp. z o.o." />
+    <meta name="keywords" content="ankieta, badanie, opinii" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Ankieta</title>
+</head>
+<body>
+<div>
+    <h1>Badanie form spędzania czasu wolnego</h1>
+</div>
+<div>
+    <h2>Pytania metryczkowe</h2>
+    <label for="wiek"><i>Podaj swój wiek</i></label>
+    <input type="number" min="18" step="1" />
+</div>
+<div>
+    <p><i>Wybierz płeć</i></p>
+    <input type="radio" id="woman" name="gender" />
+    <label for="woman"><i>Kobieta</i></label>
+
+    <input type="radio" id="men" name="gender" />
+    <label for="men"><i>Mężczyzna</i></label>
+</div>
+<div>
+    <p><i>Wielkość miejscowości zamieszkania</i></p>
+    <input type="radio" id="wieś" name="miejscowość" />
+    <label for="wieś"><i>Wieś</i></label>
+
+    <input type="radio" id="małe miasto" name="miejscowość" />
+    <label for="małe miasto"><i>Małe miasto do 40 000</i></label>
+
+    <input type="radio" id="miasto" name="miejscowość" />
+    <label for="miasto"><i>Miasto 40 000-400 000 mieszkańców</i></label>
+
+    <input type="radio" id="duże miasto" name="miejscowość" />
+    <label for="duże miasto"><i>Duże miasto powyżej 400 000 mieszkańców</i></label>
+</div>
+<div>
+    <h2>Pytania o formy spędzania wolnego czasu</h2>
+</div>
+<div>
+    <p><i>Ile czasu wolnego posiadasz dziennie?</i></p>
+    <select name="czas wolny">
+        <option value="1">do 1h</option>
+        <option value="2">1-3h</option>
+        <option value="3">powyżej 3h</option>
+    </select>
+
+</div>
+<div>
+    <p><i>Ile książek przeczytałeś/aś w ciągu ostatniego roku?</i></p>
+    <select name="książki">
+        <option value="1">0</option>
+        <option value="2">1-3</option>
+        <option value="3">3-6</option>
+        <option value="4">powyżej 6</option>
+    </select>
+</div>
+<div>
+    <p><i>W jaki sposób spędzasz czas wolny? (wybierz wszystkie pasujące odpowiedzi)</i></p>
+    <input type="checkbox" id="aktywność fizyczna"/>
+    <label for="aktywność fizyczna">aktywność fizyczna</label>
+
+    <input type="checkbox" id="aktywność bierna" />
+    <label for="aktywność bierna">Aktywność bierna</label>
+
+    <input type="checkbox" id="inne" />
+    <label for="inne">Inne</label>
+
+
+</div>
+<div>
+    <p><i>Ile godzin tygodniowo poświęcasz na rozwój zainteresowań?</i></p>
+    <select name="rozwój zainteresowań">
+        <option value="1">do 1h</option>
+        <option value="2">1-3h</option>
+        <option value="3">powyżej 3h</option>
+    </select>
+
+</div>
+<div>
+    <p><i>Ile godzin tygodniowo poświęcasz na aktywność fizyczną?</i></p>
+    <select name="Aktywność fizyczna">
+        <option value="1">do 1h</option>
+        <option value="2">1-3h</option>
+        <option value="3">powyżej 3h</option>
+    </select>
+
+</div>
+<div>
+    <p><i>Ile godzin tygodniowo poświęcasz na spotkania ze znajomymi?</i></p>
+    <select name="spotkania">
+        <option value="1">do 2h</option>
+        <option value="2">2-5h</option>
+        <option value="3">powyżej 5h</option>
+    </select>
+</div>
+<div>
+    <p><i>Z kim zazwyczaj spędzasz wolny czas? </i></p>
+    <input type="checkbox" id="czas wolny" />
+    <label for="czas wolny"><i>z rodziną</i></label>
+
+    <input type="checkbox" id="czas wolny" />
+    <label for="czas wolny"><i>ze znajomymi</i></label>
+
+    <input type="checkbox" id="czas wolny" />
+    <label for="czas wolny"><i>sam(a)</i></label>
+</div>
+<div>
+    <p><i>W skali 5 stopniowej określ czy często nudzisz się w czasie wolnym?</i></p>
+    <input type="range" min="0" max="5" step="1" />
+</div>
+<div>
+    <p><i>W skali 5 stopniowej określ czy Twoja miejscowość posiada wystarczająco dużo atrakcji, odpowiednich do realizacji zainteresowań?</i></p>
+    <input type="range" min="0" max="5" step="1" />
+</div>
+<br>
+<br>
+<br>
+<input type="button" value="Wyślij ankietę" />
+</body>
+
+</html>

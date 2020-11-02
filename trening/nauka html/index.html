@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listy-ćwiczenie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul>
+        <li>Element</li>
+        <li>Element</li>
+
+        <ol type="I">
+            <li>Element</li>
+            <li> Element</li>
+        </ol>
+        <dl>
+            <dd>
+                <ol>
+                    <li value="6">Element</li>
+                    <li>Element</li>
+                    <li>Element</li>
+                    <li>Element</li>
+                </ol>
+            </dd>
+        </dl>
+        <ol type="I" start="10">
+            <li>Element</li>
+        </ol>
+        <li>Element</li>
+        <ol type="a">
+            <li>Element</li>
+            <li>Element</li>
+
+        </ol>
+        <dl>
+            <dd>
+                <ol type="A" start="G" reversed>
+                    <li>Element</li>
+                    <li>Element</li>
+                    <li>Element</li>
+                    <li>Element</li>
+                    <li>Element</li>
+                    <li>Element</li>
+                </ol>
+        </dl>
+        </dd>
+        <ol type="a" start="3">
+            <li>Element</li>
+        </ol>
+        <li>Element</li>
+    </ul>
+
+    <p>Formularz zbierający dane do zamówienia:</p>
+    <form method="POST">
+        <label for="imię">Imię</label>
+        <input type="text" name="imię" id="imię" />
+        <br>
+        <label for="nazwisko">Nazwisko</label>
+        <input type="text" name="nazwisko" id="nazwisko" />
+        <br>
+        <label for="Ulica">Ulica</label>
+        <input type="text" name="ulica" id="ulica" />
+        <br>
+        <label for="Numer">Numer</label>
+        <input type="number" name="Numer" id="Numer" />
+        <br>
+        <label for="kod pocztowy">Kod pocztowy</label>
+        <input type="number" name="Kod pocztowy" id="Kod pocztowy" />
+        <br>
+        <label for="miejscowość">Miejscowość</label>
+        <input type="text" name="Miejscowość" id="miejscowość" />
+        <br>
+        <label for="e-mail">E-mail</label>
+        <input type="email" name="e-mail" id="e-mail" />
+        <br>
+        <p>Zaznacz zgody:</p>
+        <input type="checkbox" id="faktura" />
+        <label for="zgoda1">Chcę otrzymać fakturę.</label>
+        <input type="checkbox" id="regulamin" required />
+        <label for="zgoda2">Akceptuję regulamin sklep</label>
+        <br>
+        <button type="submit">
+            <img src="https://blog.prepscholar.com/hubfs/body_submit.jpg" alt="submit" target="_blank" />
+        </button>
+    </form>
+
+
+
+    </form>
+<!--komentarz html-->
+    <iframe src="https://www.google.pl/" width="400" height="200"></iframe>
+
+    <iframe src="" name="ramka"></iframe>
+    <a href="index.html" target="ramka">Otwórz index</a>
+    <a href="http://www.wp.pl" target="ramka">Otwórz wp</a>
+
+    <table border="1">
+        <caption>Nazwa tabeli</caption>
+        <tr>
+            <td colspan="2">Wiersz 1, kolumna 1</td>
+            <td>Wiersz 1, kolumna 2</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Wiersz 2, kolumna 1</td>
+            <td>Wiersz 2, kolumna 2</td>
+        </tr>
+    </table>
+
+
+    <table>
+        <colgroup>
+            <col />
+            <col />
+        </colgroup>
+    </table>
+
+    <table border="4">
+        <caption>Nazwa tabeli</caption>
+        <thead>
+            <tr>
+                <th>Nagłówek 1, kolumna 1</th>
+                <th>Nagłówek 2, kolumna 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Wiersz 1, kolumna 1</td>
+                <td>Wiersz 1, kolumna 2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Stopka tabeli</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <p><b>SKLEP-ćwiczenie</b></p>
+<table border="3">
+    <caption>Twój koszyk</caption>
+    <thead>
+        <tr>
+            <td>Nazwa produktu</td>
+            <td>Cena produktu</td>
+            <td>Ilość</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>buty <img src="https://a.allegroimg.com/s512/030ac4/7ef1642145a8b82fda3a872c61a8/BUTY-FILA-DISRUPTOR-II-PREMIUM-39-5-GRATIS" alt="buty" width="50" height="50"/></td>
+            <td>200</td>
+            <td>1 <a href="">Usuń produkt</a></td>
+        </tr>
+        <tr>
+            <td>kurtka <img src="https://brendi.pl/pol_ps_Damska-Kurtka-Wiosenna-Diana-Szara-4426_1.jpg" alt="buty" width="50" height="50"/></td>
+            <td>200</td>
+            <td>1 <a href="">Usuń produkt</a></td>
+        </tr>
+        <tr>
+            <td>spodnie <img src="https://www.uniformix.pl/pol_pl_Spodnie-medyczne-damskie-Eldan-E453-atramentowe-1565_6.jpg" alt="buty" width="50" height="50"/></td>
+            <td>200</td>
+            <td>1 <a href="">Usuń produkt</a></td>
+        </tr>
+    </tbody>
+<tfoot>
+    <tr>
+        <td colspan="3">Sklep online</td>
+    </tr>
+</tfoot>
+    
+</table>
+<br>
+<br>
+<br>
+<p>Audio i wideo</p>
+<audio controls autoplay loop>
+    <source src="Long & Junior   Będę Śpiewał i Grał.mp3" type="audio/mpeg">
+        <p>Long&Junior !!!!</p>
+</audio>
+<video controls>
+    <source src="https://www.youtube.com/watch?v=8TZ-Y2WE9i8&list=RD8TZ-Y2WE9i8&start_radio=1" type="video/webm">
+        <p>Twoja przeglądarka nie obsługuje plików wideo</p>
+</video>
+
+<video controls src="https://www.youtube.com/watch?v=Y-Y0onrjldQ&list=RD8TZ-Y2WE9i8&index=2">
+<track default kind="subtitles" srclang="pl" label="Polski" src="pl.vtt"/>
+</video>
+
+
+<input type="button" value="wyślij" />
+</body>
+
+</html>

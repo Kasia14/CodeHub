@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="shortcut icon" href="https://techfresh.pl/wp-content/uploads/2016/12/kalkulator-na-matur%C4%99.jpg"
+        type="image/x-icon" />
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="calculator">
+            <div id="result">
+                <div id="history">
+                    <p id="history-value"></p>
+                </div>
+                <div id="output">
+                    <p id="output-value"></p>
+                </div>
+            </div>
+            <div id="keyboard">
+                <button onclick ="backspace()"class="operator">C</button>
+                <button class="operator" onclick="writeResult('')">CE</button>
+                <button onclick="button('%')" class="operator">%</button>
+                <button onclick="button('/')" class="operator">&#247;</button>
+                <button onclick="button(7)" class="number">7</button>
+                <button onclick="button(8)" class="number">8</button>
+                <button onclick="button(9)" class="number">9</button>
+                <button onclick="button('*')" class="operator">&times;</button>
+                <button onclick="button(4)" class="number">4</button>
+                <button onclick="button(5)" class="number">5</button>
+                <button onclick="button(6)" class="number">6</button>
+                <button class="operator" onclick="button('-')">-</button>
+                <button onclick="button(1)" class="number">1</button>
+                <button onclick="button(2)" class="number">2</button>
+                <button onclick="button(3)" class="number">3</button>
+                <button onclick="button('+')" class="operator">+</button>
+                <button class="empty"></button>
+                <button onclick="button(0)" class="number">0</button>
+                <button onclick="button('.')" class="operator">.</button>
+                <button class="operator" onclick="summary()">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="calculator.js"></script>
+
+</html>

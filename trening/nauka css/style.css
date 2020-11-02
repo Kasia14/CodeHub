@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Dancing+Script:wght@700&display=swap');
+@keyframes animacja {
+    0%{
+        background-color: turquoise;
+        font-size: 10px;
+    }
+    50% {
+        background-color: violet;
+        font-size: 15px;
+    }
+    100% {
+        background-color: blue;
+        font-size: 20px;
+    }
+}
+
+p{
+    color: hsl(120, 100%, 50%);
+    padding: 10px 25x 15px;
+    margin: 15px;
+    text-align: justify;
+    word-spacing: 5px;
+    text-shadow: 5px 5px 5px #000;
+    transition: all 300ms ease-in-out;
+}
+
+p:hover{
+    background-color: yellow;
+}
+
+button {
+    background-color: crimson;
+    color: black;
+    border: white ;
+    padding: 10px;
+    border-radius: 10px;
+    animation: animacja 3s infinite;
+
+}
+
+input[type="button"] {
+    background-color: crimson;
+    color: black;
+    border: white ;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.parent {
+    color: purple;
+    text-decoration: line-through;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+body{
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Dancing Script', cursive;
+    font-variant: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bolder;
+    font-stretch: semi-expanded;
+    background-color: darkred;
+}
+
+.bg {
+    
+    background-image: url('https://lh3.googleusercontent.com/proxy/95MeFgBUItePcUqlVYSDqJz7j-GgtpvQhKz9L4dmJ5dmWK_Su_NeNE6iUsx62XkQpoxFAHT2quToJualM-L4W3yMFLY1OyZIn-D1PlVy') ;
+    background-size: contain;
+    background-position: top;
+    
+}
+
+.flexbox-container {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-grow: initial;
+    flex-shrink: 2;
+}
+.try {
+    font-size: 100px;
+}
