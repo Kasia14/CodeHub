@@ -85,8 +85,6 @@ class Calendar {
             }
 
         })
-
-
     }
 
     getPrevNextClick() {
@@ -102,12 +100,26 @@ class Calendar {
         })
     }
 
+    fillNotes() {
+        var noteForDay = this.notes.getNote(this.date);
+        if(noteForDay){
+            var inputs = document.getElementsByClassName('noteInput');
+            for(var i = 9; i < noteForDay.notes.length || i < 19; i++) {
+                if(noteForDay.notes[i]){
+                    inputs[i-9].value = noteForDay.notes[i];
+                }
+            }
+           
+        }
+    }
+
     render() {
         this.init();
         this.getToday();
         this.getPrevLastDays();
         this.getDaysAndToday();
         this.getNextDays();
+        this.fillNotes();
 
         this.monthDays.innerHTML = this.days;
     }
