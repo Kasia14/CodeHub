@@ -17,10 +17,11 @@ class Calendar {
 
     ];
     days = "";
-    notes = "";
-    constructor() {
+    notes = null;
+    constructor(notes) {
         this.getPrevNextClick();
         this.hideOrShow();
+        this.notes = notes;
     }
 
     init() {
@@ -60,24 +61,17 @@ class Calendar {
 
     getNextDays() {
         if (this.lastDayIndex !== 1) {
-            for (let j = 1; j <= this.nextDays + 6 ; j++) {
+            for (let j = 1; j <= this.nextDays + 6; j++) {
                 this.days += `<div class="next-date">${j}</div>`;
             }
         }
     }
 
     getWriteNotes() {
-        for(let k=1; k<=this.note; k++){
-        this.note = document.querySelector('.note h3');
-        this.note.innerHTML = `<input type="text">${k}</input>`;
-    }}
-
-    getDailyNotes() {
-        this.monthDays.addEventListener('click', () => {
-            this.getWriteNotes();
-            this.render();
-        })
-
+        for (let k = 1; k <= this.note; k++) {
+            this.note = document.querySelector('.note h3');
+            this.note.innerHTML = `<input type="text">${k}</input>`;
+        }
     }
 
     hideOrShow() {
@@ -89,7 +83,7 @@ class Calendar {
             } else {
                 object.style.display = 'block';
             }
-            
+
         })
 
 
@@ -114,36 +108,64 @@ class Calendar {
         this.getPrevLastDays();
         this.getDaysAndToday();
         this.getNextDays();
-        this.getDailyNotes();
-        
 
         this.monthDays.innerHTML = this.days;
     }
 
 }
 
-const kalendarzyk = new Calendar();
-kalendarzyk.render();
+class Note {
+    notes = [];
 
+    constructor(date) {
+        this.notes = [];
+        this.date = date;
+    }
 
+    putNote(hour, note) {
+        this.notes[hour] = note;
+    }
 
-class Notes {
-    constructor(note, date){
-    this.note = "";
-    this.date=new Date();
-}
-}
-
-class  AllNotes {
-    notes = "";
-    date = new Date();
-    getNotes(date){
-date = document.querySelector('.days');
-note = document.querySelector('.note');
+    getNote(hour) {
+        return this.notes[hour];
     }
 }
-//localStorage.setItem('kalendarzyk', JSON.stringify(kalendarzyk));
 
+class AllNotes{
+    notes = [];
+
+    constructor() {
+        if ("notki" in localStorage) { // w ten sposób możesz sprawdzić czy właściwość wewnątrz obiektu istnieje
+            this.notes = JSON.parse(localStorage.getItem('notki')); 
+        } else {
+            // dane nie istnieją
+        }
+    }
+
+    addNote(note) {
+        this.notes.push(note);
+        this.save();
+        this.notes = JSON.parse(localStorage.getItem('notki'));
+    }
+
+    getNote(date){     
+        const found = this.notes.find(x => this.search(x.date, date));
+        return found;
+    }
+
+    search(itemDate, searchDate){
+        var datetime = new Date(itemDate);
+        return datetime.getFullYear() == searchDate.getFullYear() 
+                && datetime.getMonth() == searchDate.getMonth() 
+                && datetime.getDate() == searchDate.getDate()
+    }
+
+    save(){
+        localStorage.setItem('notki', JSON.stringify(this.notes));
+    }
+}
+
+//localStorage.setItem('kalendarzyk', JSON.stringify(kalendarzyk));
 
 /* let kalendarzyk = [];
 if ("kalendarzyk in localStorage"){
@@ -151,3 +173,17 @@ if ("kalendarzyk in localStorage"){
 } else{
     // dane nie istnieją
 } */
+
+const n = new Note(new Date(2020,10,2));
+n.putNote(10, "Kasia");
+n.putNote(12, "Pysio");
+
+const n1 = new Note(new Date(2020,11,1));
+n1.putNote(1, "BlaBla");
+
+const notki = [n, n1];
+localStorage.setItem('notki', JSON.stringify(notki));
+
+
+const kalendarzyk = new Calendar(new AllNotes());
+kalendarzyk.render();

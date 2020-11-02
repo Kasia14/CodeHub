@@ -157,3 +157,20 @@ cursor: pointer;
     height: 50px;
    margin-left: 20px;
 }
+
+.save{
+    display: flex ;
+    justify-content: center;
+  
+}
+#save{
+    border-radius: 5%;
+    color: white;
+    background-color:#167e56 ;
+    border:  0.2rem solid #777; ;
+    font-size: 20px;
+    width: 720px;
+    text-shadow: 0 0.3re 0.5rem rgba(0,0,0,0.5);
+    cursor: pointer;
+    
+}
