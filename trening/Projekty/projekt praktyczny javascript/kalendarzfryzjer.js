@@ -52,9 +52,9 @@ class Calendar {
     getDaysAndToday() {
         for (let i = 1; i <= this.lastDay; i++) {
             if (i === new Date().getDate() && this.date.getMonth() === new Date().getMonth()) {
-                this.days += `<div class="today">${i}</div>`;
+                this.days += `<div class="today day">${i}</div>`;
             } else {
-                this.days += `<div>${i}</div>`;
+                this.days += `<div class="day">${i}</div>`;
             }
         }
     }
@@ -99,18 +99,26 @@ class Calendar {
             this.render();
         })
     }
+    getChangeNotesofDay() {
+        var tab = document.getElementsByClassName('day');
+        for(var element of tab) {
+            element.addEventListener('click', (e) => {
+                e.target.style.opacity = "0.5";
+            })
+        }
+    }
 
     fillNotes() {
         var noteForDay = this.notes.getNote(this.date);
-        if(noteForDay){
+        if (noteForDay) {
             var inputs = document.getElementsByClassName('noteInput');
-            for(var i = 9; i < noteForDay.notes.length || i < 19; i++) {
-                if(noteForDay.notes[i]){
-                    inputs[i-9].value = noteForDay.notes[i];
-                }
+            for (var i = 9; i < noteForDay.notes.length || i < 19; i++) {
+                if (noteForDay.notes[i])
+                    inputs[i - 9].value = noteForDay.notes[i];
             }
-           
+
         }
+
     }
 
     render() {
@@ -122,6 +130,8 @@ class Calendar {
         this.fillNotes();
 
         this.monthDays.innerHTML = this.days;
+        this.getChangeNotesofDay();
+
     }
 
 }
@@ -143,12 +153,12 @@ class Note {
     }
 }
 
-class AllNotes{
+class AllNotes {
     notes = [];
 
     constructor() {
         if ("notki" in localStorage) { // w ten sposób możesz sprawdzić czy właściwość wewnątrz obiektu istnieje
-            this.notes = JSON.parse(localStorage.getItem('notki')); 
+            this.notes = JSON.parse(localStorage.getItem('notki'));
         } else {
             // dane nie istnieją
         }
@@ -160,19 +170,19 @@ class AllNotes{
         this.notes = JSON.parse(localStorage.getItem('notki'));
     }
 
-    getNote(date){     
+    getNote(date) {
         const found = this.notes.find(x => this.search(x.date, date));
         return found;
     }
 
-    search(itemDate, searchDate){
+    search(itemDate, searchDate) {
         var datetime = new Date(itemDate);
-        return datetime.getFullYear() == searchDate.getFullYear() 
-                && datetime.getMonth() == searchDate.getMonth() 
-                && datetime.getDate() == searchDate.getDate()
+        return datetime.getFullYear() == searchDate.getFullYear()
+            && datetime.getMonth() == searchDate.getMonth()
+            && datetime.getDate() == searchDate.getDate()
     }
 
-    save(){
+    save() {
         localStorage.setItem('notki', JSON.stringify(this.notes));
     }
 }
@@ -186,11 +196,11 @@ if ("kalendarzyk in localStorage"){
     // dane nie istnieją
 } */
 
-const n = new Note(new Date(2020,10,2));
+const n = new Note(new Date(2020, 10, 2));
 n.putNote(10, "Kasia");
 n.putNote(12, "Pysio");
 
-const n1 = new Note(new Date(2020,11,1));
+const n1 = new Note(new Date(2020, 11, 1));
 n1.putNote(1, "BlaBla");
 
 const notki = [n, n1];

@@ -1,0 +1,21 @@
+.passwordWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+.passwordWrapper input {
+    flex-basis:100%;
+    margin: 10px 0;
+}
+.field {
+    text-transform: uppercase;
+}
+
+progress{
+    flex-basis: 100%;
+    background-color: chartreuse;
+}
+body{
+    background-color: rgb(240, 255, 252);
+}
