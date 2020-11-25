@@ -26,7 +26,7 @@ class Add {
         const text = document.querySelector('.text');
         const preContainer = document.createElement('pre');
         preContainer.setAttribute('class', 'yourText')
-        preContainer.textContent = this.text.value;
+        preContainer.textContent = text.value;
         const container = document.querySelector('.container')
         container.appendChild(preContainer);
 
