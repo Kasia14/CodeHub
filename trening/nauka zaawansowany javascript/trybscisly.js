@@ -17,8 +17,8 @@ class Add {
     start = document.querySelector('.start');
     text = document.querySelector('.text');
     constructor() {
-        this.queue.addEventListener('click', this.readCode());
-        this.start.addEventListener('click', this.timer());
+        this.queue.addEventListener('click', this.readCode);
+        this.start.addEventListener('click', this.timer);
 
     }
     readCode() {
@@ -45,6 +45,5 @@ class Add {
 }
 "use strict"
 const add = new Add();
-add.readCode();
-add.timer();
+
 
