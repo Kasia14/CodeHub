@@ -41,13 +41,15 @@ class Add {
     }
     addToTab() {
         //Wyciagnij element z tablicy wyswietl i usun go
-
-        var usunienty = tab.shift();
-        this.tab.forEach(usunienty);
+        if(this.tab.length == 0){
+            clearInterval(this.clearIntervale);
+            return;
+        }
+        var usunienty = this.tab.shift();
         document.querySelector('.newTab').innerHTML = usunienty;
     }
     timer() {
-        setInterval(this.addToTab, 1000);
+        this.clearIntervale = setInterval(() => {this.addToTab()}, 1000);
 
     }
 
