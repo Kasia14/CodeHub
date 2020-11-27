@@ -13,32 +13,41 @@ petName = "Alex"; // error */
 
 
 class Add {
+    tab = [];
     queue = document.querySelector('.queue');
     start = document.querySelector('.start');
     text = document.querySelector('.text');
     constructor() {
-        this.queue.addEventListener('click', this.readCode);
-        this.start.addEventListener('click', this.timer);
+        var parent = this;
+        this.queue.addEventListener('click', () => {
+            parent.readCode();
+        });
+        this.start.addEventListener('click', () => {
+            parent.timer();
+        });
 
     }
-    readCode() {
+    readCode(parent) {
 
         const text = document.querySelector('.text');
         const preContainer = document.createElement('pre');
         preContainer.setAttribute('class', 'yourText')
         preContainer.textContent = text.value;
+
         const container = document.querySelector('.container')
         container.appendChild(preContainer);
+        this.tab.push(text.value);
 
     }
-
     addToTab() {
-        let tab = [];
-        let read = this.readCode();
-        tab.push(read)
+        //Wyciagnij element z tablicy wyswietl i usun go
+
+        var usunienty = tab.shift();
+        this.tab.forEach(usunienty);
+        document.querySelector('.newTab').innerHTML = usunienty;
     }
     timer() {
-        setInterval(this.addToTab(), 1000);
+        setInterval(this.addToTab, 1000);
 
     }
 
