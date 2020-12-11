@@ -28,3 +28,4 @@ function primeCheck (prime, n){
     }
     return primeCheck(prime, n-1);
 }
+
