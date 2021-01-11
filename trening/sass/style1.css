@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: cornsilk;
+}
+body h1 {
+  display: flex;
+  justify-content: center;
+  background-color: crimson;
+  font-size: 40px;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  background-color: darkorange;
+  color: black;
+  font-size: 20px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  background-color: darkgreen;
+  font-size: 30px;
+}
+
+footer {
+  display: flex;
+  align-self: flex-end;
+  color: burlywood;
+}
+
+/*# sourceMappingURL=style1.css.map */

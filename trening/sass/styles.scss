@@ -1,5 +1,44 @@
-$dark: #444;
+$black: black;
+$milk: cornsilk;
+$red: crimson;
+$green: darkgreen;
+$orange: darkorange;
+$lightorange: burlywood;
 
-body {
-    color: $dark;
+$heading-size: 40px;
+$heading2-size: 30px;
+$paragraph-size: 20px;
+
+
+body{
+    display: flex;
+  flex-direction: column;
+  background-color:$black;
+  color: $milk;
+  h1{
+    display: flex;
+    justify-content: center;
+    background-color: $red;
+    font-size: $heading-size;
+   
+    }
+}
+p{
+    display: flex;
+    justify-content: center;
+    background-color: $orange;
+    color: $black;
+    font-size: $paragraph-size;
+   
+    }
+h2{
+    display: flex;
+    justify-content: center;
+    background-color: $green;
+    font-size:  $heading2-size;
+}
+footer{
+    display: flex;
+    align-self: flex-end;
+    color: $lightorange;
 }
