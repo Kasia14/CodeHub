@@ -1,0 +1,23 @@
+.orange-box {
+  background-color: orange;
+}
+.orange-box p {
+  color: black;
+}
+
+.red-box {
+  background-color: red;
+}
+.red-box p {
+  color: white;
+}
+
+.light-box {
+  background-color: lightgray;
+}
+.light-box p {
+  color: darkgray;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=zagniezdzanie.css.map */
