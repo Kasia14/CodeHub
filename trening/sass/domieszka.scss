@@ -1,0 +1,23 @@
+@mixin rectangle($bg, $color){
+    background-color: $bg ;
+    color: $color;
+    font-size: 1rem;
+    border-radius: 20%;
+    min-height: 300px;
+    width: 100%;
+}
+.rectangle1{
+    @include rectangle(red, white);
+}
+.rectangle2{
+    @include rectangle(black, grey);
+}
+.rectangle3{
+    @include rectangle(green, yellow);
+}
+.rectangle4{
+    @include rectangle(pink, violet);
+}
+.rectangle5{
+    @include rectangle(brown, orange);
+}

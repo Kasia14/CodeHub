@@ -1,0 +1,46 @@
+.rectangle1 {
+  background-color: red;
+  color: white;
+  font-size: 1rem;
+  border-radius: 20%;
+  min-height: 300px;
+  width: 100%;
+}
+
+.rectangle2 {
+  background-color: black;
+  color: grey;
+  font-size: 1rem;
+  border-radius: 20%;
+  min-height: 300px;
+  width: 100%;
+}
+
+.rectangle3 {
+  background-color: green;
+  color: yellow;
+  font-size: 1rem;
+  border-radius: 20%;
+  min-height: 300px;
+  width: 100%;
+}
+
+.rectangle4 {
+  background-color: pink;
+  color: violet;
+  font-size: 1rem;
+  border-radius: 20%;
+  min-height: 300px;
+  width: 100%;
+}
+
+.rectangle5 {
+  background-color: brown;
+  color: orange;
+  font-size: 1rem;
+  border-radius: 20%;
+  min-height: 300px;
+  width: 100%;
+}
+
+/*# sourceMappingURL=domieszka.css.map */
