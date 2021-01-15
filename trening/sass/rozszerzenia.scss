@@ -1,0 +1,31 @@
+%naglowki {
+   display: flex;
+   justify-content: center;
+   background-color: blueviolet;
+    
+}
+
+h1{
+    @extend %naglowki;
+    font-weight: 700;
+}
+h2{
+    @extend %naglowki;
+    font-weight: 600;
+}
+h3{
+    @extend %naglowki;
+    font-weight: 500;
+}
+h4{
+    @extend %naglowki;
+    font-weight: 400;
+}
+h5{
+    @extend %naglowki;
+    font-weight: 300;
+}
+h6{
+    @extend %naglowki;
+    font-weight: 200;
+}
