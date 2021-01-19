@@ -1,0 +1,12 @@
+$colors:
+    "kolor1" rgb(250,250,250), 
+    "kolor2" rgb(151, 67, 151), 
+    "kolor3" rgb(35, 177, 30);
+
+@each $name, $background-color in $colors{ 
+    .tlo-#{$name} { 
+        padding: 0; 
+        margin: 0; 
+        background-color: $background-color; 
+    } 
+}
