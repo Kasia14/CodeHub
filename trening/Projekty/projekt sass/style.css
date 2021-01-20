@@ -1,0 +1,125 @@
+.body {
+  background-color: lightgrey;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: #8ee7fd;
+  font-family: "Zilla Slab", serif;
+}
+
+@media (min-width:360px) and (max-width: 1023px ) {
+  .container {
+    max-width: 1023px;
+    height: 200vh;
+  }
+
+  .title {
+    text-transform: uppercase;
+  }
+  .title h1 {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #image {
+    display: flex;
+    align-items: center;
+    width: 210px;
+    height: 90px;
+    border-radius: 5%;
+    border: 3px solid black;
+  }
+
+  .form {
+    position: absolute;
+    margin-top: 150px;
+    font-size: 12px;
+    display: flex;
+    flex-flow: column;
+    height: fit-content;
+    align-items: center;
+  }
+
+  select[name=typ_samochodu] {
+    border-radius: 2%;
+    border: 2px solid #cac838;
+    background: antiquewhite;
+    width: 150%;
+    display: flex;
+    align-self: center;
+    height: 20px;
+  }
+
+  #window {
+    background: content-box;
+    color: black;
+    cursor: pointer;
+    border: 2px solid black;
+    text-decoration: none;
+    margin: 10%;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    min-width: 1024px;
+    height: 200vh;
+  }
+
+  .title {
+    display: flex;
+    flex-flow: column;
+    text-transform: uppercase;
+    height: fit-content;
+    float: right;
+  }
+  .title h1 {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #image {
+    display: flex;
+    align-items: center;
+    width: 440px;
+    height: 210px;
+    border-radius: 5%;
+    border: 3px solid black;
+  }
+
+  .form {
+    position: absolute;
+    margin-top: 350px;
+    font-size: 18px;
+    display: flex;
+    flex-flow: column;
+    height: fit-content;
+    align-items: center;
+  }
+
+  select[name=typ_samochodu] {
+    border-radius: 2%;
+    border: 2px solid #cac838;
+    background: antiquewhite;
+    width: 150%;
+    display: flex;
+    align-self: center;
+    height: 30px;
+  }
+
+  #window {
+    background: content-box;
+    color: black;
+    cursor: pointer;
+    border: 2px solid black;
+    text-decoration: none;
+    margin: 10%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
