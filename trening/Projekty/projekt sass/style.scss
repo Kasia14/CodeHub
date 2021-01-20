@@ -89,7 +89,9 @@ $bgselect: antiquewhite;
     select[name=typ_samochodu] {
         @include select(150%, 20px)
     }
-
+    input[type=date]{
+        @include select(150%, 20px)
+    }
     #window{
         @include a(10%)
     }
@@ -129,6 +131,9 @@ $bgselect: antiquewhite;
     }
 
     select[name=typ_samochodu] {
+        @include select(150%, 30px)
+    }
+    input[type=date]{
         @include select(150%, 30px)
     }
     #window{

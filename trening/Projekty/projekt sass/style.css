@@ -53,6 +53,16 @@
     height: 20px;
   }
 
+  input[type=date] {
+    border-radius: 2%;
+    border: 2px solid #cac838;
+    background: antiquewhite;
+    width: 150%;
+    display: flex;
+    align-self: center;
+    height: 20px;
+  }
+
   #window {
     background: content-box;
     color: black;
@@ -103,6 +113,16 @@
   }
 
   select[name=typ_samochodu] {
+    border-radius: 2%;
+    border: 2px solid #cac838;
+    background: antiquewhite;
+    width: 150%;
+    display: flex;
+    align-self: center;
+    height: 30px;
+  }
+
+  input[type=date] {
     border-radius: 2%;
     border: 2px solid #cac838;
     background: antiquewhite;
