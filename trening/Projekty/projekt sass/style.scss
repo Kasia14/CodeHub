@@ -29,16 +29,16 @@ $bgselect: antiquewhite;
 }
 
 @mixin select($width, $height) {
-    border-radius: 2%;
+    border-radius: 7px;
     border: 2px solid $lightorange;
     background: $bgselect;
     width: $width;
     display: flex;
     align-self: center;
     height: $height;
-  
-    
-  
+
+
+
 }
 
 @mixin a ($margin) {
@@ -49,13 +49,46 @@ $bgselect: antiquewhite;
     text-decoration: none;
     margin: $margin;
 }
-@mixin info ($height, $width){
+
+@mixin info ($height, $width) {
     min-height: $height;
     min-width: $width;
     text-align: center;
     background: $bgselect;
     border: 2px solid $lightorange;
+    border-radius: 7px;
+    margin: 2%;
+    
 }
+
+@mixin nick ($fontsize) {
+    font-size: $fontsize;
+    width: 20%;
+    height: 10%;
+    border-radius: 7px;
+    margin: 20px 0;
+    padding: 10px;
+    background: transparent;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid $black;
+    
+    margin: 2%;
+
+}
+
+@mixin opinions($fontsize) {
+    width: 25%;
+    height: 30%;
+    border-radius: 7px;
+    background: transparent;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid $black;
+    font-size: $fontsize;
+    margin: 2%;
+}
+
 .body {
     background-color: $lightgrey;
 }
@@ -66,7 +99,8 @@ $bgselect: antiquewhite;
     background-color: $lightblue;
     font-family: 'Zilla Slab', serif;
 }
-.info{
+
+.info {
     display: flex;
     flex-flow: column;
 }
@@ -74,7 +108,7 @@ $bgselect: antiquewhite;
 @media #{$mobile} {
     .container {
         max-width: 1023px;
-        height: 200vh;
+        height: 130vh;
 
     }
 
@@ -99,18 +133,40 @@ $bgselect: antiquewhite;
     select[name=typ_samochodu] {
         @include select(150%, 20px)
     }
-    input[type=date]{
+
+    input[type=date] {
         @include select(150%, 20px)
     }
-    #window{
+
+    #window {
         @include a(10%)
     }
-    input[type=text]{
-        @include info(50px,150px )
+
+    .text {
+        @include info(50px, 150px)
     }
-    .info{
+
+    .info {
         text-align: center;
         font-weight: bold;
+    }
+
+    .opinion {
+        background-color: $bgselect;
+        display: flex;
+        flex-flow: column;
+        height: 40vh;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .nick {
+        @include nick(12px);
+    }
+    .opinion1 {
+        @include opinions(12px)
     }
 }
 
@@ -122,7 +178,7 @@ $bgselect: antiquewhite;
         display: flex;
         justify-content: center;
         min-width: 1024px;
-        height: 200vh;
+        height: 170vh;
     }
 
     .title {
@@ -150,17 +206,40 @@ $bgselect: antiquewhite;
     select[name=typ_samochodu] {
         @include select(150%, 30px)
     }
-    input[type=date]{
+
+    input[type=date] {
         @include select(150%, 30px)
     }
-    #window{
+
+    #window {
         @include a(10%)
     }
-    input[type=text]{
-        @include info(150px,250px )
+
+    .text {
+        @include info(150px, 250px)
     }
-    .info{
+
+    .info {
         text-align: center;
         font-weight: bold;
+    }
+
+    .opinion {
+        background-color: $bgselect;
+        display: flex;
+        flex-flow: column;
+        height: 50vh;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .nick {
+        @include nick(16px);
+    }
+
+    .opinion1 {
+        @include opinions(16px)
     }
 }

@@ -17,7 +17,7 @@
 @media (min-width:360px) and (max-width: 1023px ) {
   .container {
     max-width: 1023px;
-    height: 200vh;
+    height: 130vh;
   }
 
   .title {
@@ -49,7 +49,7 @@
   }
 
   select[name=typ_samochodu] {
-    border-radius: 2%;
+    border-radius: 7px;
     border: 2px solid #cac838;
     background: antiquewhite;
     width: 150%;
@@ -59,7 +59,7 @@
   }
 
   input[type=date] {
-    border-radius: 2%;
+    border-radius: 7px;
     border: 2px solid #cac838;
     background: antiquewhite;
     width: 150%;
@@ -77,17 +77,55 @@
     margin: 10%;
   }
 
-  input[type=text] {
+  .text {
     min-height: 50px;
     min-width: 150px;
     text-align: center;
     background: antiquewhite;
     border: 2px solid #cac838;
+    border-radius: 7px;
+    margin: 2%;
   }
 
   .info {
     text-align: center;
     font-weight: bold;
+  }
+
+  .opinion {
+    background-color: antiquewhite;
+    display: flex;
+    flex-flow: column;
+    height: 40vh;
+  }
+  .opinion h3 {
+    text-align: center;
+  }
+
+  .nick {
+    font-size: 12px;
+    width: 20%;
+    height: 10%;
+    border-radius: 7px;
+    margin: 20px 0;
+    padding: 10px;
+    background: transparent;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 2%;
+  }
+
+  .opinion1 {
+    width: 25%;
+    height: 30%;
+    border-radius: 7px;
+    background: transparent;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 12px;
+    margin: 2%;
   }
 }
 @media (min-width: 1024px) {
@@ -95,7 +133,7 @@
     display: flex;
     justify-content: center;
     min-width: 1024px;
-    height: 200vh;
+    height: 170vh;
   }
 
   .title {
@@ -131,7 +169,7 @@
   }
 
   select[name=typ_samochodu] {
-    border-radius: 2%;
+    border-radius: 7px;
     border: 2px solid #cac838;
     background: antiquewhite;
     width: 150%;
@@ -141,7 +179,7 @@
   }
 
   input[type=date] {
-    border-radius: 2%;
+    border-radius: 7px;
     border: 2px solid #cac838;
     background: antiquewhite;
     width: 150%;
@@ -159,17 +197,55 @@
     margin: 10%;
   }
 
-  input[type=text] {
+  .text {
     min-height: 150px;
     min-width: 250px;
     text-align: center;
     background: antiquewhite;
     border: 2px solid #cac838;
+    border-radius: 7px;
+    margin: 2%;
   }
 
   .info {
     text-align: center;
     font-weight: bold;
+  }
+
+  .opinion {
+    background-color: antiquewhite;
+    display: flex;
+    flex-flow: column;
+    height: 50vh;
+  }
+  .opinion h3 {
+    text-align: center;
+  }
+
+  .nick {
+    font-size: 16px;
+    width: 20%;
+    height: 10%;
+    border-radius: 7px;
+    margin: 20px 0;
+    padding: 10px;
+    background: transparent;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 2%;
+  }
+
+  .opinion1 {
+    width: 25%;
+    height: 30%;
+    border-radius: 7px;
+    background: transparent;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 16px;
+    margin: 2%;
   }
 }
 
