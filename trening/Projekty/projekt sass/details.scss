@@ -1,0 +1,17 @@
+$mobile: "(min-width:360px) and (max-width: 1023px )";
+$desktop: "(min-width: 1024px)";
+
+$lightblue: rgb(142, 231, 253);
+$lightgrey: lightgrey;
+$black: black;
+$lightorange: rgb(202, 200, 56);
+$bgselect: antiquewhite;
+
+
+@media #{$mobile}{
+
+}
+
+@media #{$desktop}{
+    
+}
