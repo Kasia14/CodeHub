@@ -9,6 +9,11 @@
   font-family: "Zilla Slab", serif;
 }
 
+.info {
+  display: flex;
+  flex-flow: column;
+}
+
 @media (min-width:360px) and (max-width: 1023px ) {
   .container {
     max-width: 1023px;
@@ -70,6 +75,19 @@
     border: 2px solid black;
     text-decoration: none;
     margin: 10%;
+  }
+
+  input[type=text] {
+    min-height: 50px;
+    min-width: 150px;
+    text-align: center;
+    background: antiquewhite;
+    border: 2px solid #cac838;
+  }
+
+  .info {
+    text-align: center;
+    font-weight: bold;
   }
 }
 @media (min-width: 1024px) {
@@ -139,6 +157,19 @@
     border: 2px solid black;
     text-decoration: none;
     margin: 10%;
+  }
+
+  input[type=text] {
+    min-height: 150px;
+    min-width: 250px;
+    text-align: center;
+    background: antiquewhite;
+    border: 2px solid #cac838;
+  }
+
+  .info {
+    text-align: center;
+    font-weight: bold;
   }
 }
 
