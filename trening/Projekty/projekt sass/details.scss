@@ -8,10 +8,151 @@ $lightorange: rgb(202, 200, 56);
 $bgselect: antiquewhite;
 
 
-@media #{$mobile}{
+@mixin formdiv($fontsize, $margintop) {
+    position: absolute;
+    margin-top: $margintop;
+    font-size: $fontsize;
+    display: flex;
+    flex-flow: column;
+    height: fit-content;
+    align-items: center;
+}
+
+
+@mixin intitle($width, $height) {
+    display: flex;
+    align-items: center;
+    width: $width;
+    height: $height;
+    border-radius: 5%;
+    border: 3px solid $black;
+}
+@mixin select($width, $height) {
+    border-radius: 7px;
+    border: 2px solid $lightorange;
+    background: $bgselect;
+    width: $width;
+    display: flex;
+    align-self: center;
+    height: $height;
+
 
 }
 
+@mixin btn($height){
+    width: 50%;
+    height: $height;
+    border-radius: 10px;
+    background: $bgselect;
+    border: 2px solid $lightorange;
+    margin-top: 10%;
+}
+@mixin a ($margin) {
+    background: content-box;
+    color: $black;
+    cursor: pointer;
+    border: 2px solid $black;
+    text-decoration: none;
+    margin: $margin;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: $lightblue;
+    font-family: 'Zilla Slab', serif;
+}
+
+
+@media #{$mobile}{
+    .container {
+        max-width: 1023px;
+        height: 190vh;
+
+    }
+    .title {
+        text-transform: uppercase;
+
+        h1 {
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    #image {
+        @include intitle(210px, 90px)
+    }
+    .form {
+        @include formdiv(12px, 150px)
+    }
+    select[name=typ_samochodu] {
+        @include select(100%, 20px)
+    }
+    input[type=date] {
+        @include select(100%, 20px)
+    }
+    input[type=checkbox] {
+        @include select(100%, 20px)
+    }
+    input[type=text]{
+        @include select(100%, 20px)
+      }
+      .name{
+          margin-top: 15%;
+      }
+      .btn{
+        @include btn(25px)
+    }
+    #window{
+        @include a(10%)
+    }
+}
+
 @media #{$desktop}{
-    
+    .container {
+        display: flex;
+        justify-content: center;
+        min-width: 1024px;
+        height: 210vh;
+    }
+    .title {
+        display: flex;
+        flex-flow: column;
+        text-transform: uppercase;
+        height: fit-content;
+        float: right;
+
+        h1 {
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    #image {
+        @include intitle(440px, 210px)
+    }
+    .form {
+        @include formdiv(18px, 350px)
+    }
+    select[name=typ_samochodu] {
+        @include select(150%, 30px)
+    }
+    input[type=date] {
+        @include select(150%, 30px)
+    }
+    input[type=checkbox] {
+        @include select(100%, 20px)
+    }
+  input[type=text]{
+    @include select(100%, 20px)
+  }
+  .name{
+      margin-top: 15%;
+  }
+  .btn{
+      @include btn(35px)
+  }
+
+  #window{
+    @include a(10%)
+}
 }
